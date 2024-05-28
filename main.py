@@ -51,7 +51,7 @@ credentials = Credentials.from_service_account_file('autotask-424212-324884f166e
 client = gspread.authorize(credentials)
 
 # Specify Sheet
-spread_sheet_id = "1U1ef856r0528NaNLHWl9e8WFR_v-NOlF-JTEE-tvOUI"
+spread_sheet_id = os.getenv("SHEET_ID")
 sheet = client.open_by_key(spread_sheet_id).sheet1
 values = []
 
